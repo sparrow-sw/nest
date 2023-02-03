@@ -4,10 +4,14 @@
   "description": "codebase for development of dockerized ness stack applications",
   "main": "index.js",
   "scripts": {
-    "docker:build": "cd docker && docker-compose build",
+    "docker:build": "cd docker && docker-compose build --parallel --build-arg",
+    "docker:build:hard": "cd docker && docker-compose build --parallel --no-cache --force-rm --compress --build-arg",
     "docker:start": "cd docker && docker-compose up --detach",
     "docker:logs": "cd docker && docker-compose logs -f",
-    "docker:stop": "cd docker && docker-compose down"
+    "docker:stop": "cd docker && docker-compose down",
+    "docker:volumes:rm": "rm -rf ./docker/volumes",
+    "docker:clean": "cd docker && docker-compose rm -fsv && yarn docker:build",
+    "docker:clean:hard": "cd docker && docker-compose rm -fsv && yarn docker:volumes:rm && yarn docker:build:hard"
   },
   "repository": {
     "type": "git",
