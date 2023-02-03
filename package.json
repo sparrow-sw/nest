@@ -4,7 +4,10 @@
   "description": "codebase for development of dockerized ness stack applications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docker:build": "cd docker && docker-compose build",
+    "docker:start": "cd docker && docker-compose up --detach",
+    "docker:logs": "cd docker && docker-compose logs -f",
+    "docker:stop": "cd docker && docker-compose down"
   },
   "repository": {
     "type": "git",
