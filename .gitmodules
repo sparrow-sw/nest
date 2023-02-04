@@ -1,0 +1,24 @@
+# apps
+[submodule "apps/web-app"]
+	path = apps/web-app
+	url = https://github.com/sparrow-sw/web-app
+# services
+[submodule "services/fargate-service"]
+	path = services/fargate-service
+	url = https://github.com/sparrow-sw/fargate-service
+[submodule "services/lambda-service"]
+	path = services/lambda-service
+	url = https://github.com/sparrow-sw/lambda-service
+# libraries
+[submodule "libraries/db-service"]
+	path = libraries/db-service
+	url = https://github.com/sparrow-sw/db-service
+[submodule "libraries/env-service"]
+	path = libraries/env-service
+	url = https://github.com/sparrow-sw/env-service
+[submodule "libraries/test-service"]
+	path = libraries/test-service
+	url = https://github.com/sparrow-sw/test-service
+[submodule "libraries/util-service"]
+	path = libraries/util-service
+	url = https://github.com/sparrow-sw/util-service
